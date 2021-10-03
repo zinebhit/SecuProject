@@ -16,6 +16,7 @@ Phase 1 : Particpating in a competition of Data Anonymisation (DARC)
     Example :
     
     [feat] : Created new Class with linked functions 
+    [test] : tested github bot for discord
 
 
 
