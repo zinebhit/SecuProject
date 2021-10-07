@@ -8,14 +8,16 @@ project(Security_Project)
 set(CMAKE_CXX_STANDARD 17)
 
 # Add all header-file (library) recursively to project
-file(GLOB_RECURSE HEADERS "DataFrame/*.hpp" "DataFrame/*.tcc")
+
+#file(GLOB_RECURSE HEADERS "DataFrame/*.hpp" "DataFrame/*.tcc")
+add_subdirectory(DataFrame)
 
 # Add flags
 set(CMAKE_CXX_FLAGS_RELEASE -O3)
-
-add_library(DataFrame INTERFACE)
-target_include_directories(DataFrame INTERFACE .)
-target_sources(DataFrame INTERFACE ${HEADERS})
+#
+#add_library(DataFrame INTERFACE)
+#target_include_directories(DataFrame INTERFACE .)
+#target_sources(DataFrame INTERFACE ${HEADERS})
 #INCLUDE_DIRECTORIES(DataFrame)
 #LINK_DIRECTORIES(DataFrame)
 
