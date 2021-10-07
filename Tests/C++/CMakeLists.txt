@@ -11,6 +11,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 #file(GLOB_RECURSE HEADERS "DataFrame/*.hpp" "DataFrame/*.tcc")
 add_subdirectory(DataFrame)
+add_subdirectory(csv-parser)
 
 # Add flags
 set(CMAKE_CXX_FLAGS_RELEASE -O3)
@@ -26,5 +27,7 @@ set(CMAKE_CXX_FLAGS_RELEASE -O3)
 # add main.cpp to project
 # now we can run by click run_main in the toolbar
 add_executable(run_main main.cpp)
+add_executable(fix_dataset fix_dataset.cpp)
 
 target_link_libraries(run_main DataFrame)
+target_link_libraries(fix_dataset csv)

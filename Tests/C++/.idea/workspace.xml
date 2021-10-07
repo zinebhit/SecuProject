@@ -5,20 +5,13 @@
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="Security_Project" targetName="hello_world" />
-      <config projectName="Security_Project" targetName="vectors_tester" />
+      <config projectName="Security_Project" targetName="fix_dataset" />
+      <config projectName="Security_Project" targetName="csv" />
+      <config projectName="Security_Project" targetName="csv_info" />
+      <config projectName="Security_Project" targetName="uninstall" />
       <config projectName="Security_Project" targetName="run_main" />
       <config projectName="Security_Project" targetName="DataFrame" />
-      <config projectName="Security_Project" targetName="dataframe_tester_2" />
-      <config projectName="Security_Project" targetName="dataframe_tester_3" />
-      <config projectName="Security_Project" targetName="dataframe_tester" />
-      <config projectName="Security_Project" targetName="dataframe_performance_2" />
-      <config projectName="Security_Project" targetName="vector_ptr_view_tester" />
-      <config projectName="Security_Project" targetName="dataframe_performance" />
-      <config projectName="Security_Project" targetName="uninstall" />
-      <config projectName="Security_Project" targetName="dataframe_thread_safety" />
-      <config projectName="Security_Project" targetName="gen_rand_tester" />
-      <config projectName="Security_Project" targetName="date_time_tester" />
+      <config projectName="Security_Project" targetName="csv_stats" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -28,45 +21,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4d77f22-91f2-4cb4-b0cf-04bbfde5b4b2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../.idea/SecuProject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/csv.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fix_dataset.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/DataFrame.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/DataFrameFinancialVisitors.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/DataFrameMLVisitors.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/DataFrameOperators.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/DataFrameStatsVisitors.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/DataFrameTransformVisitors.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/DataFrameTypes.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/Internals/DataFrame.tcc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/Internals/DataFrame_functors.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/Internals/DataFrame_get.tcc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/Internals/DataFrame_join.tcc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/Internals/DataFrame_misc.tcc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/Internals/DataFrame_opt.tcc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/Internals/DataFrame_private_decl.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/Internals/DataFrame_read.tcc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/Internals/DataFrame_set.tcc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/Internals/DataFrame_shift.tcc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/Internals/DataFrame_standalone.tcc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/Internals/DataFrame_visit.tcc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/Internals/DataFrame_write.tcc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/Internals/RandGen.tcc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/RandGen.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/Utils/Aggregenerator.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/Utils/DateTime.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/Utils/FixedSizePriorityQueue.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/Utils/FixedSizeString.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/Utils/ThreadGranularity.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/Utils/Utils.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/Vectors/HeteroPtrView.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/Vectors/HeteroPtrView.tcc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/Vectors/HeteroVector.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/Vectors/HeteroVector.tcc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/Vectors/HeteroView.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/Vectors/HeteroView.tcc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/Vectors/VectorPtrView.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFrame/Vectors/VectorView.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataFrame/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DataFrame/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,6 +40,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="1zBYB2drXG0745SwST8GhhbnRR3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -93,6 +60,7 @@
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.advertisement.text.has.clang-format" value="true" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
@@ -103,58 +71,33 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="RunManager" selected="CMake Application.run_main">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DataFrame" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Security_Project" TARGET_NAME="DataFrame" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="dataframe_performance" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Security_Project" TARGET_NAME="dataframe_performance" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Security_Project" RUN_TARGET_NAME="dataframe_performance">
+    <configuration name="csv" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Security_Project" TARGET_NAME="csv" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="dataframe_performance_2" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Security_Project" TARGET_NAME="dataframe_performance_2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Security_Project" RUN_TARGET_NAME="dataframe_performance_2">
+    <configuration name="csv_info" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Security_Project" TARGET_NAME="csv_info" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Security_Project" RUN_TARGET_NAME="csv_info">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="dataframe_tester" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Security_Project" TARGET_NAME="dataframe_tester" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Security_Project" RUN_TARGET_NAME="dataframe_tester">
+    <configuration name="csv_stats" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Security_Project" TARGET_NAME="csv_stats" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Security_Project" RUN_TARGET_NAME="csv_stats">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="dataframe_tester_2" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Security_Project" TARGET_NAME="dataframe_tester_2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Security_Project" RUN_TARGET_NAME="dataframe_tester_2">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="dataframe_tester_3" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Security_Project" TARGET_NAME="dataframe_tester_3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Security_Project" RUN_TARGET_NAME="dataframe_tester_3">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="dataframe_thread_safety" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Security_Project" TARGET_NAME="dataframe_thread_safety" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Security_Project" RUN_TARGET_NAME="dataframe_thread_safety">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="date_time_tester" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Security_Project" TARGET_NAME="date_time_tester" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Security_Project" RUN_TARGET_NAME="date_time_tester">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="gen_rand_tester" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Security_Project" TARGET_NAME="gen_rand_tester" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Security_Project" RUN_TARGET_NAME="gen_rand_tester">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="hello_world" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Security_Project" TARGET_NAME="hello_world" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Security_Project" RUN_TARGET_NAME="hello_world">
+    <configuration name="fix_dataset" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Security_Project" TARGET_NAME="fix_dataset" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Security_Project" RUN_TARGET_NAME="fix_dataset">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -169,36 +112,19 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="vector_ptr_view_tester" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Security_Project" TARGET_NAME="vector_ptr_view_tester" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Security_Project" RUN_TARGET_NAME="vector_ptr_view_tester">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="vectors_tester" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Security_Project" TARGET_NAME="vectors_tester" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Security_Project" RUN_TARGET_NAME="vectors_tester">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="CMake Application.fix_dataset" />
       <item itemvalue="CMake Application.run_main" />
+      <item itemvalue="CMake Application.csv" />
+      <item itemvalue="CMake Application.csv_info" />
+      <item itemvalue="CMake Application.csv_stats" />
       <item itemvalue="CMake Application.DataFrame" />
-      <item itemvalue="CMake Application.dataframe_performance" />
-      <item itemvalue="CMake Application.dataframe_performance_2" />
-      <item itemvalue="CMake Application.dataframe_tester" />
-      <item itemvalue="CMake Application.dataframe_tester_2" />
-      <item itemvalue="CMake Application.dataframe_tester_3" />
-      <item itemvalue="CMake Application.dataframe_thread_safety" />
-      <item itemvalue="CMake Application.date_time_tester" />
-      <item itemvalue="CMake Application.gen_rand_tester" />
-      <item itemvalue="CMake Application.hello_world" />
       <item itemvalue="CMake Application.uninstall" />
-      <item itemvalue="CMake Application.vector_ptr_view_tester" />
-      <item itemvalue="CMake Application.vectors_tester" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -210,6 +136,8 @@
       <option name="presentableId" value="Default" />
       <updated>1633622809408</updated>
       <workItem from="1633622812253" duration="8292000" />
+      <workItem from="1633639560319" duration="4835000" />
+      <workItem from="1633644504457" duration="2744000" />
     </task>
     <servers />
   </component>
@@ -226,5 +154,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
