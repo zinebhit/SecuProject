@@ -19,19 +19,22 @@ using ULDataFrame = StdDataFrame<unsigned long>;
 //using StrDataFrame = StdDataFrame<std::string>;
 
 unsigned long const number_of_lines = 34551849;
+unsigned long const number_of_lines_for_test = 200;
 
 int main() {
     ULDataFrame ul_df1;
     // create column index : from 0 -> N-1
-    ul_df1.load_data(ULDataFrame::gen_sequence_index(0, number_of_lines, 1 ));
+//    ul_df1.load_data(ULDataFrame::gen_sequence_index(0, number_of_lines, 1 ));
+    ul_df1.load_data(ULDataFrame::gen_sequence_index(0, number_of_lines_for_test, 1 ));
 
     // test dataset
-//    ul_df1.read("/home/nightfury/CLionProjects/new.csv", io_format::csv2, true);
+    ul_df1.read("/Users/nightfury/CLionProjects/test_bdd.csv", io_format::csv2, true);
 
     // real dataset
-    ul_df1.read("/home/nightfury/CLionProjects/fixed_bdd.csv", io_format::csv2, true);
+//    ul_df1.read("/Users/nightfury/CLionProjects/fixed_bdd.csv", io_format::csv2, true);
 
+    ul_df1.remove_column("INDEX");
     // print to stdout
-//    ul_df1.write<std::ostream, int, string, string, string>(cout, io_format::csv2);
+    ul_df1.write<std::ostream, int, string, double, double>(cout, io_format::csv2);
     return 0;
 }
