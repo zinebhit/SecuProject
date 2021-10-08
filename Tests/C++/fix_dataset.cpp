@@ -2,7 +2,7 @@
 // Created by nightfury on 10/7/21.
 //
 #include <fstream>
-#include "csv.hpp"
+//#include
 
 using namespace csv;
 // This file will add a header (a line) to the data set.
@@ -23,6 +23,7 @@ std::string add_type_of_column(std::string column_name,  std::string column_type
     else
         return column_name + ":" + NUMBER_OF_LINES + ":<" + column_type + '>';
 }
+
 int main() {
     // create fixed_bdd.csv
 //    std::ofstream fixed_dataset("/Users/nightfury/CLionProjects/fixed_bdd.csv", std::ofstream::trunc);

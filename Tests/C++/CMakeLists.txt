@@ -10,7 +10,8 @@ set(CMAKE_CXX_STANDARD 17)
 # Add all header-file (library) recursively to project
 
 #file(GLOB_RECURSE HEADERS "DataFrame/*.hpp" "DataFrame/*.tcc")
-add_subdirectory(DataFrame)
+add_subdirectory(library/DataFrame)
+add_subdirectory(library/library/csv-parser)
 #add_subdirectory(csv-parser)
 
 # Add flags
@@ -29,5 +30,5 @@ set(CMAKE_CXX_FLAGS_RELEASE -O3)
 add_executable(run_main main.cpp)
 add_executable(fix_dataset fix_dataset.cpp)
 
-target_link_libraries(run_main DataFrame)
+target_link_libraries(run_main library/DataFrame)
 #target_link_libraries(fix_dataset csv)
