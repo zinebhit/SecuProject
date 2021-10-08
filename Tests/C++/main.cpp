@@ -5,10 +5,8 @@
 using namespace std;
 
 int main() {
-    ULDataFrame df = dazc::read("/home/nightfury/CLionProjects/test_bdd.csv", 50);
-    // test : print date-time's column
-    vector<string> date_time = df.get_column<string>("DateTime");
-    for (auto d : date_time) cout << d << " | \n";
+    // To count number of lines of data set, use : wc -l name_data_set.csv
+    ULDataFrame df = dazc::read("/home/nightfury/CLionProjects/bdd.csv", 34551849);
     return 0;
 }
 

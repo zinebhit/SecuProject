@@ -1,0 +1,9 @@
+prefix=/usr/local
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: DataFrame
+Description: C++ DataFrame -- R's and Pandas DataFrame in modern C++ using native types, continuous memory storage, and no virtual functions.
+Version: 1.0.0
+Cflags: -I${includedir}
+Libs: -L${libdir} -lDataFrame

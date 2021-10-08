@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/DataFrame/Vectors/VectorPtrView.h
+algorithm
+-
+functional
+-
+iterator
+-
+vector
+-
+
+/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/test/vector_ptr_view_tester.cc
+DataFrame/Vectors/VectorPtrView.h
+-
+cassert
+-
+iostream
+-
+

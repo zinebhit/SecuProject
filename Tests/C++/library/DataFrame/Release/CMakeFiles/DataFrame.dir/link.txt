@@ -1,0 +1,2 @@
+/usr/bin/ar qc lib/libDataFrame.a CMakeFiles/DataFrame.dir/src/Vectors/HeteroVector.cc.o CMakeFiles/DataFrame.dir/src/Vectors/HeteroView.cc.o CMakeFiles/DataFrame.dir/src/Vectors/HeteroPtrView.cc.o CMakeFiles/DataFrame.dir/src/Utils/DateTime.cc.o
+/usr/bin/ranlib lib/libDataFrame.a
