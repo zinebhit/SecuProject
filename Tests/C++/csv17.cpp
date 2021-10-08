@@ -11,13 +11,6 @@ using namespace std;
 //const unsigned int NUMBER_OF_LINES = 50;
 const unsigned int NUMBER_OF_LINES = 34551849;
 
-struct node{
-   unsigned int id;
-   string date;
-   double x;
-   double y;
-};
-
 int main() {
 //    std::ofstream fixed_dataset("/Users/nightfury/CLionProjects/fixed_bdd.csv", std::ofstream::trunc);
 //    std::string s;
