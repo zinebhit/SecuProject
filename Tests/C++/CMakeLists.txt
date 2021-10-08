@@ -25,10 +25,10 @@ set(CMAKE_CXX_FLAGS  "-pthread -Ofast")
 #add_executable(fix_dataset fix_dataset.cpp)
 #add_executable(csv17 csv17.cpp)
 
-add_executable(run_save_main save_main.cpp)
+add_executable(run_save_main trash/save_main.cpp)
 add_executable(run_main main.cpp)
-add_executable(fix_dataset fix_dataset.cpp)
-add_executable(csv17  csv17.cpp)
+add_executable(fix_dataset trash/fix_dataset.cpp)
+add_executable(csv17 trash/csv17.cpp)
 add_executable(dazc DAZC.cpp)
 
 target_link_libraries(run_save_main DataFrame)
