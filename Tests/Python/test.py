@@ -1,6 +1,6 @@
 import pandas as pd
 
-data = pd.read_csv('/home/nightfury/CLionProjects/fixed_bdd.csv') # rename as how your groundtruth is 
+data = pd.read_csv('/home/nightfury/CLionProjects/bdd.csv') # rename as how your groundtruth is 
 data1 = data.to_numpy()
 
 #copy = open("copy.csv","w")

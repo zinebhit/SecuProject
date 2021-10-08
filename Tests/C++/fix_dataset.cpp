@@ -2,7 +2,7 @@
 // Created by nightfury on 10/7/21.
 //
 #include <fstream>
-//#include
+#include "library/csv.hpp"
 
 using namespace csv;
 // This file will add a header (a line) to the data set.
@@ -13,7 +13,7 @@ using namespace csv;
 //     -> result : 34551849 bdd.csv
 
 const std::string NUMBER_OF_LINES = "34551849";
-const std::string NUMBER_OF_LINES_FOR_TEST = "200";
+const std::string NUMBER_OF_LINES_FOR_TEST = "50";
 
 // argument column type must be in the "<here>" ;
 // example : bool ->> "bool"
@@ -28,7 +28,7 @@ int main() {
     // create fixed_bdd.csv
 //    std::ofstream fixed_dataset("/Users/nightfury/CLionProjects/fixed_bdd.csv", std::ofstream::trunc);
     // create test_bdd.csv : a small data set
-    std::ofstream fixed_dataset("/Users/nightfury/CLionProjects/test_bdd.csv", std::ofstream::trunc);
+    std::ofstream fixed_dataset("/home/nightfury/CLionProjects/test_bdd.csv", std::ofstream::trunc);
     std::string s;
     // Add name , type here   ; the last line hasn't le comma ','
     // Should avoid "int" ; use "ul" instead
@@ -46,7 +46,7 @@ int main() {
     }
     fixed_dataset << s << '\n';
 //    std::ifstream dataset("/home/nightfury/CLionProjects/bdd.csv");
-    CSVReader reader("/Users/nightfury/CLionProjects/bdd.csv");
+    CSVReader reader("/home/nightfury/CLionProjects/bdd.csv");
     int count = 0;
     for (CSVRow& row: reader) { // Input iterator
         if (count++ >= stoi(NUMBER_OF_LINES_FOR_TEST)) {break;}
