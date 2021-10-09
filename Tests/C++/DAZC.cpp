@@ -6,11 +6,40 @@
 
 //using namespace std;
 using ULDataFrame = hmdf::StdDataFrame<unsigned long>;
+using namespace hmdf;
 
+unsigned int NUMBER_OF_LINE;
+
+// get data
+namespace dazc {
+    struct point {
+        int id{};
+        std::string datetime;
+        double x{};
+        double y{};
+    };
+
+    point get_data_row(const ULDataFrame& df, unsigned int index) {
+        assert(index >= 0);
+        HeteroVector row = df.get_row<int, std::string, double>(index);
+        point data_point = {
+                row.at<int>(0),
+                row.at<std::string>(0),
+                row.at<double>(0),
+                row.at<double>(1)
+        };
+        return data_point;
+    }
+}
+
+// some useful functions
 namespace dazc {
     // use wc -l to know number of lines of the data set
     ULDataFrame read(const std::string &file_name, const unsigned int number_of_lines) {
-        csv::CSVReader reader(file_name);
+        // set global variable
+        NUMBER_OF_LINE = number_of_lines;
+        csv::CSVFormat format; format.delimiter('\t').no_header();
+        csv::CSVReader reader(file_name, format);
         std::vector<int> id(number_of_lines);
         std::vector<std::string> date(number_of_lines);
         std::vector<double> x(number_of_lines);
@@ -21,7 +50,7 @@ namespace dazc {
         int count = 0;
         for (csv::CSVRow &row: reader) { // Input iterator
             // check if variale number_of_lines smaller than the real number of lines
-            assert (count >= number_of_lines && "Error: Wrong number of lines!");
+            assert (count < number_of_lines && "Error: Wrong number of lines!");
             for (int i = 0; i < row.size(); i++) {
                 if (i == 0) id[count] = row[i].get<int>();
                 else if (i == 1) date[count] = row[i].get<std::string_view>();
@@ -36,7 +65,7 @@ namespace dazc {
         // Start value is included. End value is excluded.
         // Index will be from 1 to N. (N is number_of_lines)
         df.load_data(
-                ULDataFrame::gen_sequence_index(1, number_of_lines + 1, 1), // INDEX
+                ULDataFrame::gen_sequence_index(0, number_of_lines , 1), // INDEX
                 std::make_pair("ID", id),
                 std::make_pair("DateTime", date),
                 std::make_pair("X", x),
@@ -45,10 +74,13 @@ namespace dazc {
         return df;
     }
 
-    void write(ULDataFrame df, const std::string &file_name) {
+    void write(const ULDataFrame& df, const std::string &file_name) {
         std::ofstream output_file(file_name);
-        auto writer = csv::make_tsv_writer(output_file);
-        writer << df.get_column<int>("ID");
+        point data_point;
+        for (int i=0; i < NUMBER_OF_LINE; i++ ) {
+            data_point = get_data_row(df, i);
+            output_file << data_point.id << '\t' << data_point.datetime << '\t' << data_point.x << '\t' << data_point.y << '\n';
+        }
     }
 
     void generate_small_data_set(const std::string &input_file_name,
