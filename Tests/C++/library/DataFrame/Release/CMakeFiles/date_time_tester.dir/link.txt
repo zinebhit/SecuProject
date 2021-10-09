@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/date_time_tester.dir/test/date_time_tester.cc.o -o bin/date_time_tester  lib/libDataFrame.a -lrt -pthread 

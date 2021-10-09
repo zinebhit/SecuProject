@@ -1,0 +1,77 @@
+[
+{
+  "directory": "/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/Debug",
+  "command": "/usr/bin/c++  -I/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/include -O3 -DNDEBUG -fPIC -std=c++17 -o CMakeFiles/DataFrame.dir/src/Vectors/HeteroVector.cc.o -c /home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/src/Vectors/HeteroVector.cc",
+  "file": "/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/src/Vectors/HeteroVector.cc"
+},
+{
+  "directory": "/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/Debug",
+  "command": "/usr/bin/c++  -I/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/include -O3 -DNDEBUG -fPIC -std=c++17 -o CMakeFiles/DataFrame.dir/src/Vectors/HeteroView.cc.o -c /home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/src/Vectors/HeteroView.cc",
+  "file": "/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/src/Vectors/HeteroView.cc"
+},
+{
+  "directory": "/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/Debug",
+  "command": "/usr/bin/c++  -I/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/include -O3 -DNDEBUG -fPIC -std=c++17 -o CMakeFiles/DataFrame.dir/src/Vectors/HeteroPtrView.cc.o -c /home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/src/Vectors/HeteroPtrView.cc",
+  "file": "/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/src/Vectors/HeteroPtrView.cc"
+},
+{
+  "directory": "/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/Debug",
+  "command": "/usr/bin/c++  -I/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/include -O3 -DNDEBUG -fPIC -std=c++17 -o CMakeFiles/DataFrame.dir/src/Utils/DateTime.cc.o -c /home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/src/Utils/DateTime.cc",
+  "file": "/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/src/Utils/DateTime.cc"
+},
+{
+  "directory": "/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/Debug",
+  "command": "/usr/bin/c++  -I/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/include -O3 -DNDEBUG -fPIE -pthread -std=c++17 -o CMakeFiles/dataframe_tester.dir/test/dataframe_tester.cc.o -c /home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/test/dataframe_tester.cc",
+  "file": "/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/test/dataframe_tester.cc"
+},
+{
+  "directory": "/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/Debug",
+  "command": "/usr/bin/c++  -I/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/include -O3 -DNDEBUG -fPIE -pthread -std=c++17 -o CMakeFiles/dataframe_tester_2.dir/test/dataframe_tester_2.cc.o -c /home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/test/dataframe_tester_2.cc",
+  "file": "/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/test/dataframe_tester_2.cc"
+},
+{
+  "directory": "/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/Debug",
+  "command": "/usr/bin/c++  -I/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/include -O3 -DNDEBUG -fPIE -pthread -std=c++17 -o CMakeFiles/dataframe_tester_3.dir/test/dataframe_tester_3.cc.o -c /home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/test/dataframe_tester_3.cc",
+  "file": "/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/test/dataframe_tester_3.cc"
+},
+{
+  "directory": "/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/Debug",
+  "command": "/usr/bin/c++  -I/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/include -O3 -DNDEBUG -fPIE -pthread -std=c++17 -o CMakeFiles/hello_world.dir/test/hello_world.cc.o -c /home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/test/hello_world.cc",
+  "file": "/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/test/hello_world.cc"
+},
+{
+  "directory": "/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/Debug",
+  "command": "/usr/bin/c++  -I/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/include -O3 -DNDEBUG -fPIE -pthread -std=c++17 -o CMakeFiles/vector_ptr_view_tester.dir/test/vector_ptr_view_tester.cc.o -c /home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/test/vector_ptr_view_tester.cc",
+  "file": "/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/test/vector_ptr_view_tester.cc"
+},
+{
+  "directory": "/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/Debug",
+  "command": "/usr/bin/c++  -I/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/include -O3 -DNDEBUG -fPIE -pthread -std=c++17 -o CMakeFiles/dataframe_performance.dir/test/dataframe_performance.cc.o -c /home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/test/dataframe_performance.cc",
+  "file": "/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/test/dataframe_performance.cc"
+},
+{
+  "directory": "/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/Debug",
+  "command": "/usr/bin/c++  -I/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/include -O3 -DNDEBUG -fPIE -pthread -std=c++17 -o CMakeFiles/dataframe_thread_safety.dir/test/dataframe_thread_safety.cc.o -c /home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/test/dataframe_thread_safety.cc",
+  "file": "/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/test/dataframe_thread_safety.cc"
+},
+{
+  "directory": "/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/Debug",
+  "command": "/usr/bin/c++  -I/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/include -O3 -DNDEBUG -fPIE -pthread -std=c++17 -o CMakeFiles/dataframe_performance_2.dir/test/dataframe_performance_2.cc.o -c /home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/test/dataframe_performance_2.cc",
+  "file": "/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/test/dataframe_performance_2.cc"
+},
+{
+  "directory": "/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/Debug",
+  "command": "/usr/bin/c++  -I/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/include -O3 -DNDEBUG -fPIE -pthread -std=c++17 -o CMakeFiles/vectors_tester.dir/test/vectors_tester.cc.o -c /home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/test/vectors_tester.cc",
+  "file": "/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/test/vectors_tester.cc"
+},
+{
+  "directory": "/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/Debug",
+  "command": "/usr/bin/c++  -I/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/include -O3 -DNDEBUG -fPIE -pthread -std=c++17 -o CMakeFiles/date_time_tester.dir/test/date_time_tester.cc.o -c /home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/test/date_time_tester.cc",
+  "file": "/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/test/date_time_tester.cc"
+},
+{
+  "directory": "/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/Debug",
+  "command": "/usr/bin/c++  -I/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/include -O3 -DNDEBUG -fPIE -pthread -std=c++17 -o CMakeFiles/gen_rand_tester.dir/test/gen_rand_tester.cc.o -c /home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/test/gen_rand_tester.cc",
+  "file": "/home/nightfury/CLionProjects/SecuProject/Tests/C++/library/DataFrame/test/gen_rand_tester.cc"
+}
+]

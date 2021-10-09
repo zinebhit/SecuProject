@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/vectors_tester.dir/test/vectors_tester.cc.o -o bin/vectors_tester  lib/libDataFrame.a -lrt -pthread 
