@@ -1,8 +1,11 @@
 import pandas as pd
 
 def readCSV(filename):
-    data = pd.read_csv(filename) 
-    return data
+    column_names = ["ID", "DateTime", "X", "Y"]
+    dtypes = {'ID': 'int64', 'DateTime': 'str', 'X': 'float64', 'Y': 'float64'}
+    parse_dates = ['DateTime']
+    df = pd.read_csv(filename, sep='\t', header=None, names=column_names, dtype=dtypes, parse_dates=parse_dates)
+    return df
 
 def copyCSV(origin, destination):
     copy = open(destination,"w")
@@ -16,11 +19,11 @@ def switchLines(fileName, index1, index2):
         Attention: indexing starts at 0.
     """
     dataframe = readCSV(fileName)
-    print(dataframe.iloc[index1][0])
-    print(dataframe.iloc[index2][0])
-    temp = dataframe.iloc[index1][0]
-    dataframe.iloc[index1][0] = dataframe.iloc[index2][0]
-    dataframe.iloc[index2][0] = temp
-    dataframe.to_csv(fileName, index = False)
-    print("\n\n\n", dataframe.iloc[0][0])
+    # print(dataframe.iloc[lambda x : x.index == index1])
+    # print(dataframe.iloc[lambda x : x.index == index2])
+    temp = dataframe.iloc[index1]
+    dataframe.iloc[lambda x : x.index == index1] = dataframe.iloc[lambda x : x.index == index2]
+    dataframe.iloc[lambda x : x.index == index2] = temp
+    dataframe.to_csv(fileName, index = False, sep='\t', header=None)
+
 
