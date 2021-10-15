@@ -58,3 +58,12 @@ def findClosest(id,ids):
         print("Id: ", id, "\nclosest: \n",closeIDs)
         print("IDs left: \n",ids,"\n\n\n")
 
+
+def modifyMinutesSeconds():
+    debug = 0
+    def disturbTime(df, column):
+        df.loc[:,column] = df.loc[:,column].apply( lambda x : pd.datetime(x.year ,x.month,x.day ,x.hour,np.random.randint(0,59),np.random.randint(0,59)) )
+
+    if(debug):
+        print("Id: ", id, "\nclosest: \n",closeIDs)
+        print("IDs left: \n",ids,"\n\n\n")

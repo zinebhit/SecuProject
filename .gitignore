@@ -1,3 +1,4 @@
 .DS_Store
 Tests/C++/.idea
 Tests/C++/cmake-build-debug
+*.pyc
