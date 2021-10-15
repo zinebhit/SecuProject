@@ -2,3 +2,4 @@
 Tests/C++/.idea
 Tests/C++/cmake-build-debug
 *.pyc
+output
