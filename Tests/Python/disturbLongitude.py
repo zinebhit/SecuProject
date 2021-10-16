@@ -21,6 +21,6 @@ def f3(x):
 functions = [f1,f2,f3]
 
 def main(df, options):
-    print(options['column'])
+    #print(options['column'])
     df.loc[:,options['column']] = df.loc[:,options['column']].apply( lambda x : x + functions[int(round(x,4)*1000%10)%3-1](x))
     return df
