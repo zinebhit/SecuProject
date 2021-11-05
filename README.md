@@ -17,7 +17,9 @@ Phase 1 : Particpating in a competition of Data Anonymisation (DARC)
     
     [feat] : Created new Class with linked functions 
     [test] : tested github bot for discord
-
-
+    
+- Style Guide for Python Code : PEP 8
+    
+    https://www.python.org/dev/peps/pep-0008/#naming-conventions
 
 
