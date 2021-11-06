@@ -2,6 +2,7 @@ from math import *
 from random import *
 
 parameters = {'f1': [80,90,0,1], 'f2':[20000,40000,1000,3000], 'f3': [0.1, 0.14,0.08,0.081]}
+j = 1
 #lambda = 85 is the best: ordre de grandeur 10 ^ (-5)
 #(exp(-lambdaa)*(lambdaa**x))/factorial(x)
 def f1(x,param1,param2):
@@ -25,13 +26,16 @@ functions = [f1,f2,f3]
 
 #random works with reals and integers 
 
-def f(x):
+def f(x,limit):
+    global j
     i = randint(0,2)
     x1, x2 = int(x*10000%10), int(x*100000%10)
-    if((x1+x2)%3 == i): 
+    if((x1+x2)%3 == i and j < limit): 
+        j = j + 1
         return x + randint(1,5)
     return x + functions[i](x,(randrange(parameters['f'+str(i+1)][0]*1000,parameters['f'+str(i+1)][1]*1000))/1000,(randrange(parameters['f'+str(i+1)][2]*1000,parameters['f'+str(i+1)][3]*1000))/1000)
 
 def main(df, options):
-    df.loc[:,options['column']] = df.loc[:,options['column']].apply( lambda x : f(x))
+    limit = df.index.stop/100
+    df.loc[:,options['column']] = df.loc[:,options['column']].apply( lambda x : f(x,limit))
     return df
