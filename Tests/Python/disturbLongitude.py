@@ -27,6 +27,9 @@ functions = [f1,f2,f3]
 
 def f(x):
     i = randint(0,2)
+    x1, x2 = int(x*10000%10), int(x*100000%10)
+    if((x1+x2)%3 == i): 
+        return x + randint(1,5)
     return x + functions[i](x,(randrange(parameters['f'+str(i+1)][0]*1000,parameters['f'+str(i+1)][1]*1000))/1000,(randrange(parameters['f'+str(i+1)][2]*1000,parameters['f'+str(i+1)][3]*1000))/1000)
 
 def main(df, options):
