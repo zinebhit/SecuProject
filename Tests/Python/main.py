@@ -1,8 +1,8 @@
 import pandas as pd
-
+from numba import njit, prange
 
 from metrics import Metrics
-
+from defense import Defense
 
 if __name__ == '__main__':
     column_names = ["ID", "DateTime", "X", "Y"]
@@ -12,3 +12,6 @@ if __name__ == '__main__':
     df = pd.read_csv('smallBDD.csv', sep='\t', header=None, names=column_names, dtype=dtypes, parse_dates=parse_dates)
     metrics = Metrics(df, df)
     metrics.calculate_all()
+    defense = Defense()
+    df_id_anonymized = defense.disturb_id(df)
+    print(df_id_anonymized)
