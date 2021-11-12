@@ -17,6 +17,6 @@ Phase 1 : Particpating in a competition of Data Anonymisation (DARC)
     
     [feat] : Created new Class with linked functions 
 
+- Install libraries
 
-
-
+    python -m pip install -r .\requirements.txt
