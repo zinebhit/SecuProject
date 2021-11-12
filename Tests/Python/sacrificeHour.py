@@ -34,6 +34,6 @@ def sacrifice(x, a, b, c):
 
 
 
-def hour_sacrifice(df, options):
+def main(df, options):
         df.loc[:,options['column']] = df.loc[:,options['column']].apply(sacrifice, args=options['params'])
         return df
