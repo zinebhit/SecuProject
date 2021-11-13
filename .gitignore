@@ -4,4 +4,5 @@ Tests/C++/cmake-build-debug
 *.pyc
 output
 data_set.csv
+anonymized_data.csv
 Tests/Python/data_set.csv
