@@ -16,7 +16,7 @@ def hour_generalisation(x):
 def f(x):
     i = randint(1,1000)
     if (i == 500): return (pd.datetime(x.year, x.month, x.day, randint(0,23) ,randint(0,59),randint(0,59)))
-    hour_generalisation(x)
+    return hour_generalisation(x)
 
 def main(df, options):
     df.loc[:,options['column']] = df.loc[:,options['column']].apply(lambda x: f(x))
