@@ -32,7 +32,8 @@ def f(x,limit):
     x1, x2 = int(x*10000%10), int(x*100000%10)
     if((x1+x2)%3 == i and j < limit): 
         j = j + 1
-        return x + randint(1,10) + ((-1)**k)*randint(1,9)/10 + ((-1)**k)*randint(1,9)/100
+        p = 35 if k%2 == 1 else 10
+        return abs(x + ((-1)**k)*randint(1,p)) + ((-1)**k)*randint(1,9)/10 + ((-1)**k)*randint(1,9)/100
     return x + ((-1)**k)*functions[i](x,(randrange(parameters['f'+str(i+1)][0]*1000,parameters['f'+str(i+1)][1]*1000))/1000,(randrange(parameters['f'+str(i+1)][2]*1000,parameters['f'+str(i+1)][3]*1000))/1000)
 
 def main(df, options):

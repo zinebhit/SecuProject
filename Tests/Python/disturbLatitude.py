@@ -1,5 +1,5 @@
 from math import *
-from random import randint
+from random import *
 
 parameters = {'f1': [15,18,0,1], 'f2':[40,80,10,100], 'f3': [0.3, 0.8,0.3,0.8]}
 j = 1
@@ -32,7 +32,12 @@ def f(x,limit):
     if((x1+x2)%3 == i and j < limit): 
         j = j + 1
         return ((-1)**i)*(x - randint(1,5))
-    return ((-1)**(i+k))*(x + ((-1)**k)*randint(1,20)/10000)
+    # return ((-1)**(i+k))*(x + ((-1)**k)*randint(1,20)/10000)
+    if i == 2: 
+        p1, p2 = randrange(parameters['f3'][0]*10, parameters['f3'][1]*10)/10, randrange(parameters['f3'][2]*10, parameters['f3'][3]*10)/10
+    else: p1,p2 = randrange(parameters['f'+str(i+1)][0],parameters['f'+str(i+1)][1]), randrange(parameters['f'+str(i+1)][2],parameters['f'+str(i+1)][3])
+    
+    return ((-1)**i)*(x + ((-1)**k)*functions[i](x,p1,p2))
 
 def main(df, options):
     #print(options['column'])
