@@ -1,5 +1,6 @@
 from random import randint
 import pandas as pd
+from math import sqrt
 # pd.options.mode.chained_assignment = None
 
 
@@ -7,6 +8,7 @@ def main():
     unique = {}
     uniques = []
     seen = {}
+    near = {}
     size = 2
     column_names = ["ID", "DateTime", "X", "Y"]
     dtypes = {'ID': 'str', 'DateTime': 'str', 'X': 'float64', 'Y': 'float64'}
@@ -32,16 +34,6 @@ def main():
             uniques.append(int(df1.iloc[i]['ID']))
             unique[int(df1.iloc[i]['ID'])] = [tuple([df1.iloc[i]['X'],df1.iloc[i]['Y']])]
     uniques = list(set(uniques))
-
-    # for row in df1.itertuples():
-    #     #row[0] --> index   row[1] --> ID   row[2] --> X    row[3] --> Y
-    #     if int(row[1]) in unique.keys():
-    #         unique[int(row[1])].append(tuple([row[2],row[3]]))
-    #     else:
-    #         uniques.append(int(row[1]))
-    #         unique[int(row[1])] = [tuple([row[2],row[3]])]
-
-    #df2 = df.loc[(df['count'] != 1) & (df['ID'] == 1)]
     
     x, y, x1, y1 = 0, 0, 0, 0
     for row in df_orig.iterrows():
@@ -54,9 +46,15 @@ def main():
                 if (round(row[1].X,size),round(row[1].Y,size)) not in seen[int(row[1].ID)]: 
                     seen[int(row[1].ID)].append(tuple([round(row[1].X,size),round(row[1].Y,size)]))
                 else:
-                    l = randint(0,len(unique[int(row[1].ID)])-1)
+                    #l = randint(0,len(unique[int(row[1].ID)])-1)
                     # row[1].X, row[1].Y = unique[int(row[1].ID)][l]
-                    df_orig.at[row[0],'X'],df_orig.at[row[0],'Y'] = unique[int(row[1].ID)][l]
+                    #df_orig.at[row[0],'X'],df_orig.at[row[0],'Y'] = unique[int(row[1].ID)][l]
+                    tup = tuple([round(row[1].X,size), round(row[1].Y,size)])
+                    if tup in near.keys():
+                        df_orig.at[row[0],'X'],df_orig.at[row[0],'Y'] = near[tup]
+                    else:
+                        near[tup] = nearest(unique[int(row[1].ID)], tuple([row[1].X, row[1].Y]))
+                        df_orig.at[row[0],'X'],df_orig.at[row[0],'Y'] = near[tup]
         else:
             if int(row[1].ID) not in seen.keys():
                 seen[int(row[1].ID)] = []
@@ -67,17 +65,17 @@ def main():
                     df_orig.at[row[0],'X'],df_orig.at[row[0],'Y'] = x1, y1
                 else:
                     k = randint(0,len(uniques)-1)
-                    l = randint(0,len(unique[uniques[k]])-1)
-                    df_orig.at[row[0],'X'],df_orig.at[row[0],'Y'] = unique[uniques[k]][l]
-                    x1, y1 = unique[uniques[k]][l]
+                    #l = randint(0,len(unique[uniques[k]])-1)
+                    # df_orig.at[row[0],'X'],df_orig.at[row[0],'Y'] = unique[uniques[k]][l]
+                    # x1, y1 = unique[uniques[k]][l]
                     x, y = round(row[1].X,2), round(row[1].Y,2)
-            # if id == int(row[1].ID):
-            #     df_orig.at[row[0],'X'],df_orig.at[row[0],'Y'] = x, y
-            # else:
-            #     k = randint(0,len(uniques)-1)
-            #     l = randint(0,len(unique[uniques[k]])-1)
-            #     x, y = unique[uniques[k]][l]
-            #     id = int(row[1].ID)
+                    tup = tuple([round(row[1].X,size), round(row[1].Y,size)])
+                    if tup in near.keys():
+                        df_orig.at[row[0],'X'],df_orig.at[row[0],'Y'] = near[tup]
+                        x1, y1 = near[tup]
+                    else:
+                        near[tup] = nearest(unique[uniques[k]], tuple([row[1].X, row[1].Y]))
+                        df_orig.at[row[0],'X'],df_orig.at[row[0],'Y'] = near[tup]
 
     
     df_orig.to_csv("test_result1.csv", index=False, header=False, sep='\t')
@@ -90,6 +88,16 @@ def main():
     # df_orig = df_orig.groupby(['ID']).size().reset_index(name='count')
     # print(df)
     # print(df_orig)
+
+def nearest(liste, tup):
+    min = 100
+    tuple_min = liste[0]
+    for tup1 in liste: 
+        distance = sqrt((tup1[0]-tup[0])**2 + (tup1[1]-tup[1])**2)
+        if(distance < min):
+            min = distance
+            tuple_min = tup1
+    return tuple_min
 
 main()
 
