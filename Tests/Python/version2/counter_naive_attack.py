@@ -32,7 +32,6 @@ def main():
     # create dataframe : REPLACE WITH THE RIGHT CSV
     column_names = ["ID", "DateTime", "X", "Y"]
     dtypes = {'ID': 'str', 'DateTime': 'str', 'X': 'float64', 'Y': 'float64'}
-    parse_dates = ['DateTime']
     df = pd.read_csv('/Users/christinekhalil/Developer/SecuProject/Tests/Python/smallBDD.csv', sep='\t', header=None, names=column_names, dtype=dtypes, parse_dates=parse_dates)
 
     # find uniques after meet/tuile program
@@ -80,7 +79,7 @@ def main():
             index_array.remove(element)
 
     # int to str type for all values in the ID column (to avoid problems with "DEL")
-    #df["ID"]=df["ID"].astype(str)
+    df["ID"]=df["ID"].astype(str)
     # on "DEL" les id des lignes dans la liste index_id
     df.iloc[index_array, 0]="DEL"
     del df["Index"]
