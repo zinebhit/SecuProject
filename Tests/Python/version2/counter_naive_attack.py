@@ -66,7 +66,7 @@ def main():
             random_bool = random_tab<test_value
             # création de la liste des index à True
             if (len(df_week.loc[random_bool,"Index"])<1):
-                df_one_line = df.sample(n=1)
+                df_one_line = df_week.sample(n=1)
                 index_array = [*index_array,*(df_one_line.loc[:,"Index"].tolist())]
             else : 
                 index_array = [*index_array,*(df_week.loc[random_bool,"Index"].tolist())]
