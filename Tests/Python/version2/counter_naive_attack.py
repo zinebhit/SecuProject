@@ -70,8 +70,6 @@ def main():
                 index_array = [*index_array,*(df_one_line.loc[:,"Index"].tolist())]
             else : 
                 index_array = [*index_array,*(df_week.loc[random_bool,"Index"].tolist())]
-    # int to str type for all values in the ID column (to avoid problems with "DEL")
-    df["ID"]=df["ID"].astype(str)
 
     # enlever les lignes importantes de la liste des lignes à supprimer
     for element in index_array:
