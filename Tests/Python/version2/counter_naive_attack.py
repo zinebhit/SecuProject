@@ -86,12 +86,6 @@ def main():
     del df["Index"]
     print("Nombre de lignes supprimées : ",len(index_array))
 
-    # randomisation des heures/min/sec sans faire attention aux POI pour l'instant
-    df.iloc[index_array, 1]=df.iloc[index_array, 1].apply( lambda x : pd.datetime(x.year, x.month, x.day, random.randint(0,23),random.randint(0,59),random.randint(0,59) ))
-    # randomisation des longitudes/latitudes : à fixer out of range pour ne pas impacter POI
-    df.iloc[index_array, 2]=df.iloc[index_array, 2].apply( lambda x : 8000)
-    df.iloc[index_array, 3]=df.iloc[index_array, 3].apply( lambda x : 8000)
-
     df.to_csv("result_naive.csv", index=False, header=False, sep='\t')
 
 
