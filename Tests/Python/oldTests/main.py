@@ -11,10 +11,6 @@ if __name__ == '__main__':
     dtypes = {'ID': 'str', 'DateTime': 'str', 'X': 'float64', 'Y': 'float64'}
     parse_dates = ['DateTime']
     df = pd.read_csv('entree.csv', sep='\t', header=None, names=column_names, dtype=dtypes, parse_dates=parse_dates)
-    #df = pd.read_csv('smallBDD.csv', sep='\t', header=None, names=column_names, dtype=dtypes, parse_dates=parse_dates)
-    #defense = Defense()
-    #df_id_anonymized = defense.disturb_id(df)
-    #print(df_id_anonymized)
 
     # test sacrificeHour
     df2 = df.copy()
