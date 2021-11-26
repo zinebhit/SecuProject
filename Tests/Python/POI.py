@@ -15,10 +15,6 @@ def function(df,indices):
 
 
 
-
-
-
-
 def main():
     size = 2
     column_names = ["ID", "DateTime", "X", "Y"]
